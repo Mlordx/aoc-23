@@ -6,7 +6,7 @@ import os
 
 SESSION = os.environ['AOC_SESSION']
 parser = argparse.ArgumentParser(description='Read input')
-parser.add_argument('--year', type=int, default=2022)
+parser.add_argument('--year', type=int, default=2023)
 parser.add_argument('--day', type=int, default=2)
 args = parser.parse_args()
 
