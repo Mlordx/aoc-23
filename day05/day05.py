@@ -101,7 +101,18 @@ def answer1():
 
 
 def answer2():
-    print(seed_ranges)
+    answer = 1 << 32
+    for seed_range in seed_ranges:
+        for s in range(*seed_range):
+            soil = getInRange(seed_to_soil, s)
+            fertilizer = getInRange(soil_to_fertilizer, soil)
+            water = getInRange(fertilizer_to_water, fertilizer)
+            light = getInRange(water_to_light, water)
+            temperature = getInRange(light_to_temperature, light)
+            humidity = getInRange(temperature_to_humidity, temperature)
+            location = getInRange(humidity_to_location, humidity)
+            answer = min(int(location), answer)
+    return answer
 
 
 print(answer1())
