@@ -96,7 +96,7 @@ def determine_hand_strength(hand):
                 continue
 
             if c[char] == 4:
-                return 6 # became five of a kind
+                return 6 # became a five of a kind
 
             if c[char] == 2:
                 number_of_pairs += 1
@@ -149,11 +149,6 @@ def compare_same_hand(hand1, hand2):
 def compare_hands(hand1, hand2):
     val1 = determine_hand_strength(hand1[0])
     val2 = determine_hand_strength(hand2[0])
-    if val1 == None:
-        print(hand1[0])
-
-    if val2 == None:
-        print(hand2[0])
 
     if val1 != val2:
         return val1 - val2
