@@ -32,8 +32,8 @@ def estimate_value(sequence, part2=False):
     for i in range(len(subsequences)-1):
         x = subsequences[i][-1]
         y = subsequences[i+1][-1]
-
         subsequences[i+1].append(x+y)
+
         x = subsequences[i][0]
         y = subsequences[i+1][0]
         subsequences[i+1].insert(0, y-x)
